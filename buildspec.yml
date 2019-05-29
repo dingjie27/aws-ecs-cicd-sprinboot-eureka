@@ -1,0 +1,19 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+  pre_build:
+    commands:
+      - $(aws ecr get-login --no-include-email --region cn-northwest-1)
+  build:
+    commands:
+      - echo Build started on `date`
+      - mvn test
+      - docker build -t eureka .
+      - docker tag eureka:latest 803080908616.dkr.ecr.cn-northwest-1.amazonaws.com.cn/eureka:latest
+  post_build:
+    commands:
+      - mvn package
+      - echo Build completed on `date`
+      - docker push 803080908616.dkr.ecr.cn-northwest-1.amazonaws.com.cn/eureka:latest
