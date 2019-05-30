@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: openjdk11
+      java:openjdk-11-1.7.0
   pre_build:
     commands:
       - mvn test
