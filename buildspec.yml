@@ -11,9 +11,9 @@ phases:
       - echo Build started on `date`
       - mvn test
       - docker build -t eureka .
-      - docker tag eureka:latest 803080908616.dkr.ecr.cn-northwest-1.amazonaws.com.cn/eureka:latest
+      - docker tag eureka:latest 687804506828.dkr.ecr.us-east-1.amazonaws.com/eureka:latest
   post_build:
     commands:
       - mvn package
       - echo Build completed on `date`
-      - docker push 803080908616.dkr.ecr.cn-northwest-1.amazonaws.com.cn/eureka:latest
+      - docker push 687804506828.dkr.ecr.us-east-1.amazonaws.com/eureka:latest
