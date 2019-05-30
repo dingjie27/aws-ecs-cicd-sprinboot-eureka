@@ -6,7 +6,10 @@ phases:
       java: openjdk11
   pre_build:
     commands:
+      - echo Doing mvn test...
       - mvn test
+      - echo Logging in to Amazon ECR...
+      - $(aws ecr get-login --no-include-email --region us-east-1)
   build:
     commands:
       - echo Build started on `date`
