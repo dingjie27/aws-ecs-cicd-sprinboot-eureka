@@ -6,11 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="eureka" />
         <module name="eureka-server" />
         <module name="goldwind-eureka-server" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="eureka" target="1.8" />
       <module name="eureka-server" target="1.8" />
       <module name="goldwind-eureka-server" target="1.8" />
     </bytecodeTargetLevel>

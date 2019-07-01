@@ -1,0 +1,9 @@
+version: 0.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:us-east-1:687804506828:task-definition/my-eureka-task:4"
+        LoadBalancerInfo: 
+          ContainerName: "my-eureka-container"
+          ContainerPort: 80
