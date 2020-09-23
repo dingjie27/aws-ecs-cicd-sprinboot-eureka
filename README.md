@@ -1,6 +1,7 @@
 # aws-ecs-cicd-sprinboot-eureka
+参考架构：
 
-
+![image](https://github.com/dingjie27/aws-ecs-cicd-sprinboot-eureka/blob/master/images/architecture.png)
 参考文档：https://docs.aws.amazon.com/codebuild/latest/userguide/sample-ecr.html
 
 1、如果是使用自定义的base image，并且要把最终结果页推送到ecr。那么首先要创建一个
