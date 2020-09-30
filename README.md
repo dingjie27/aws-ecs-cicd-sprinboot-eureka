@@ -1,4 +1,14 @@
 # aws-ecs-cicd-sprinboot-eureka
+
+核心代码及使用方案介绍：
+核心代码：
+本demo部署的时spring cloud的eureka服务，https://github.com/dingjie27/aws-ecs-cicd-sprinboot-eureka/blob/master/pom.xml
+自开发的配置文件：
+https://github.com/dingjie27/aws-ecs-cicd-sprinboot-eureka/blob/master/appspec.yaml
+https://github.com/dingjie27/aws-ecs-cicd-sprinboot-eureka/blob/master/Dockerfile
+https://github.com/dingjie27/aws-ecs-cicd-sprinboot-eureka/blob/master/buildspec.yml
+
+
 参考架构：
 
 ![image](https://github.com/dingjie27/aws-ecs-cicd-sprinboot-eureka/blob/master/images/architecture.png)
