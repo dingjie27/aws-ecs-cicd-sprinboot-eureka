@@ -9,14 +9,14 @@ phases:
       - echo Doing mvn test...
       - mvn test
       - echo Logging in to Amazon ECR...
-      - $(aws ecr get-login --no-include-email --region us-east-1)
+      - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 190547127216.dkr.ecr.us-west-2.amazonaws.com
   build:
     commands:
       - echo Build started on `date`
       - mvn package
-      - docker build -t eureka .
-      - docker tag eureka:latest 687804506828.dkr.ecr.us-east-1.amazonaws.com/eureka:latest
+      - docker build -t ecs-cicd .
+      - docker tag ecs-cicd:latest 190547127216.dkr.ecr.us-west-2.amazonaws.com/ecs-cicd:latest
   post_build:
     commands:
       - echo Build completed on `date`
-      - docker push 687804506828.dkr.ecr.us-east-1.amazonaws.com/eureka:latest
+      - docker push 190547127216.dkr.ecr.us-west-2.amazonaws.com/ecs-cicd:latest
