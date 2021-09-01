@@ -5,5 +5,5 @@ Resources:
       Properties:
         TaskDefinition: "arn:aws:ecs:us-west-2:190547127216:task-definition/ecs-cicd-eureka-poc:1"
         LoadBalancerInfo: 
-          ContainerName: "ecs-cicd"
+          ContainerName: "ecs-eureka-cicd"
           ContainerPort: 80
