@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:us-east-1:687804506828:task-definition/my-eureka-task:4"
+        TaskDefinition: "arn:aws:ecs:us-west-2:190547127216:task-definition/ecs-cicd-eureka-poc:1"
         LoadBalancerInfo: 
-          ContainerName: "my-eureka-container"
+          ContainerName: "ecs-cicd"
           ContainerPort: 80
