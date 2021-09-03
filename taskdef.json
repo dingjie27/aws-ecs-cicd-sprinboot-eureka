@@ -2,7 +2,7 @@
     "executionRoleArn": "arn:aws:iam::190547127216:role/ecsTaskExecutionRole",
     "containerDefinitions": [
         {
-            "name": "ecs-cicd",
+            "name": "eureka",
             "image": "<IMAGE1_NAME>",
             "essential": true,
             "portMappings": [
