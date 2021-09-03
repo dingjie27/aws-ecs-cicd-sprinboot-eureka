@@ -10,6 +10,8 @@ phases:
       - mvn test
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 190547127216.dkr.ecr.us-west-2.amazonaws.com
+      - REPOSITORY_URI=190547127216.dkr.ecr.us-west-2.amazonaws.com/ecs-cicd:latest
+      - IMAGE_TAG=latest
   build:
     commands:
       - echo Build started on `date`
@@ -20,3 +22,7 @@ phases:
     commands:
       - echo Build completed on `date`
       - docker push 190547127216.dkr.ecr.us-west-2.amazonaws.com/ecs-cicd:latest
+      - echo Writing image definitions file...
+      - printf '[{"name":"hello-world","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+artifacts:
+    files: imagedefinitions.json
