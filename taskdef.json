@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "ecs-cicd",
-            "image": "<IMAGE1_NAME>",
+            "image": "",
             "essential": true,
             "portMappings": [
                 {
