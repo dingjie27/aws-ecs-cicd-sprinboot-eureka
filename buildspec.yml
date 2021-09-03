@@ -10,7 +10,7 @@ phases:
       - mvn test
       - echo Logging in to Amazon ECR...
       - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 190547127216.dkr.ecr.us-west-2.amazonaws.com
-      - REPOSITORY_URI=190547127216.dkr.ecr.us-west-2.amazonaws.com/ecs-cicd:latest
+      - REPOSITORY_URI=190547127216.dkr.ecr.us-west-2.amazonaws.com/ecs-cicd
       - IMAGE_TAG=latest
   build:
     commands:
