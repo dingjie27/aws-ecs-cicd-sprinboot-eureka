@@ -16,14 +16,14 @@ phases:
     commands:
       - echo Build started on `date`
       - mvn package
-      - docker build -t ecs-cicd .
-      - docker tag ecs-cicd:latest 190547127216.dkr.ecr.us-west-2.amazonaws.com/ecs-cicd:latest
+      - docker build -t eureka .
+      - docker tag eureka:latest 190547127216.dkr.ecr.us-west-2.amazonaws.com/eureka:latest
   post_build:
     commands:
       - echo Build completed on `date`
-      - docker push 190547127216.dkr.ecr.us-west-2.amazonaws.com/ecs-cicd:latest
+      - docker push 190547127216.dkr.ecr.us-west-2.amazonaws.com/eureka:latest
       - echo Writing image definitions file...
-      - printf '[{"name":"ecs-cicd","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
+      - printf '[{"name":"eureka","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
     files: 
     - appspec.yaml
