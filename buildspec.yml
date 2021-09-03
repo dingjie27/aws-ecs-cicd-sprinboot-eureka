@@ -26,6 +26,6 @@ phases:
       - printf '[{"name":"hello-world","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
 artifacts:
     files: 
-    - appspec.yml
+    - appspec.yaml
     - imagedefinitions.json
     discard-paths: yes
