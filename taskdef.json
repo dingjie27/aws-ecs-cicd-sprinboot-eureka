@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "eureka",
-            "image": "eureka",
+            "image": "190547127216.dkr.ecr.us-west-2.amazonaws.com/eureka:latest",
             "essential": true,
             "portMappings": [
                 {
