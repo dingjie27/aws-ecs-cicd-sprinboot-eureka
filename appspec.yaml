@@ -11,8 +11,6 @@ Resources:
 hooks:
   BeforeInstall:
     - timeout: 300
-  Install:
-    - timeout: 30
   AfterInstall:
     - timeout: 300
   ApplicationStart:
