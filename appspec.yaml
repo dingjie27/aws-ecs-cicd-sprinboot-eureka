@@ -12,7 +12,7 @@ hooks:
   BeforeInstall:
     - timeout: 300
   Install:
-    - timeout: 300
+    - timeout: 30
   AfterInstall:
     - timeout: 300
   ApplicationStart:
