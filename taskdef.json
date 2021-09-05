@@ -20,5 +20,5 @@
     "networkMode": "bridge",
     "cpu": "256",
     "memory": "512",
-    "family": "ecs-cicd-task"
+    "family": "eureka"
 }
