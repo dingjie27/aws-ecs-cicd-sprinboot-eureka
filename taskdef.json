@@ -3,7 +3,7 @@
     "containerDefinitions": [
         {
             "name": "eureka",
-            "image": "<IMAGE1_NAME>",
+            "image": "eureka",
             "essential": true,
             "portMappings": [
                 {
