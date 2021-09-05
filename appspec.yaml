@@ -7,3 +7,16 @@ Resources:
         LoadBalancerInfo:
           ContainerName: "eureka"
           ContainerPort: 80
+          version: 0.0
+hooks:
+  BeforeInstall:
+    - timeout: 300
+  Install:
+    - timeout: 300
+  AfterInstall:
+    - timeout: 300
+  ApplicationStart:
+    - timeout: 300
+  ApplicationStop:
+    - timeout: 300
+
