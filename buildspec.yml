@@ -23,7 +23,7 @@ phases:
       - echo Build completed on `date`
       - docker push 190547127216.dkr.ecr.us-west-2.amazonaws.com/eureka:latest
       - echo Writing image definitions file...
-      - printf '[{"name":"eureka","imageUri":"%s"}]' $REPOSITORY_URI:$IMAGE_TAG > imageDetail.json
+      - printf '{"ImageURI":"190547127216.dkr.ecr.us-west-2.amazonaws.com/eureka:latest"}' > imageDetail.json
 artifacts:
   files: 
     - imageDetail.json
