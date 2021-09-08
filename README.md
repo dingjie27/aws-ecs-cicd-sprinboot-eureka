@@ -1,5 +1,5 @@
 # aws-ecs-cicd-sprinboot-eureka
-
+need to be updated
 核心代码及使用方案介绍：
 核心代码：
 本demo部署的时spring cloud的eureka服务，https://github.com/dingjie27/aws-ecs-cicd-sprinboot-eureka/blob/master/pom.xml
